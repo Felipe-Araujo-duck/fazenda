@@ -1,33 +1,59 @@
-# 🌄 Projeto Geometria 2D - Paisagem em OpenGL
+# 🌄 Projeto Geometria 2D — Paisagem Interativa com OpenGL
 
-Este projeto foi desenvolvido como trabalho avaliativo da disciplina de **Geometria 2D** do curso de Ciência da Computação. O objetivo foi aplicar conceitos gráficos utilizando **C#** com **OpenGL** no **console do .NET Framework** para construir uma animação simples de uma paisagem.
+Este projeto foi desenvolvido como trabalho avaliativo da disciplina de **Geometria 2D** no curso de Ciência da Computação.  
+Ele utiliza **C# com OpenGL** (através da biblioteca `Tao.OpenGl` e `Tao.FreeGlut`) para renderizar uma **animação gráfica 2D interativa** no console do .NET Framework.
 
-## 🧠 Sobre o Projeto
+---
 
-A aplicação simula uma **paisagem de fazenda** composta por:
+## 🧩 Descrição
 
-- Uma **casinha pequena**
-- **Grama**
-- **Céu**
-- **Sol em movimento**
+A aplicação exibe uma paisagem simples e animada com:
 
-Durante a execução, o **sol se move pela tela simulando a passagem do tempo**. Quando o sol atravessa a tela completamente, o cenário muda para a noite e, em seguida, volta para o dia, criando um **ciclo contínuo de dia e noite**.
+- 🌿 Grama
+- 🏡 Uma pequena casa
+- ☁️ Céu (com mudança dinâmica entre dia e noite)
+- ☀️ Sol que se move de forma automática
+- 🌙 Lua com efeito de fase (aparece durante a noite)
 
-## 🛠️ Tecnologias Utilizadas
+A cada ciclo completo do sol/lua atravessando a tela, o tempo troca entre **dia** e **noite** automaticamente.  
+O usuário também pode **controlar o tempo manualmente** usando as **setas do teclado**.
 
-- **C#**
-- **.NET Framework**
-- **OpenGL (via biblioteca auxiliar para C#)**
-- Ambiente: **Console Application**
+---
 
-## 🎯 Objetivos de Aprendizagem
+## 🎮 Controles
 
-- Aplicar conceitos de **transformações geométricas 2D**.
-- Trabalhar com **coordenadas**, **formas básicas**, e **animações**.
-- Aprender fundamentos de **renderização gráfica usando OpenGL**.
+| Tecla         | Ação                                  |
+|---------------|----------------------------------------|
+| ⬅️ Esquerda   | Move o sol/lua para a esquerda         |
+| ➡️ Direita    | Move o sol/lua para a direita          |
 
-## 🚀 Como Executar
+> Ao mover o sol/lua para fora da tela, o ciclo entre dia e noite é alternado.
 
-1. Clone o repositório:
+---
+
+## 💻 Tecnologias Utilizadas
+
+- C# (.NET Framework)
+- OpenGL (via Tao Framework)
+  - `Tao.OpenGl`
+  - `Tao.FreeGlut`
+- Programação gráfica 2D com `gluOrtho2D`
+
+---
+
+## ✨ Funcionalidades
+
+- Renderização de uma paisagem com elementos 2D.
+- Simulação da passagem do tempo com sol e lua.
+- Transição visual entre dia e noite.
+- Efeito de lua minguante com sobreposição de sombra.
+- Interação do usuário com o teclado para controlar o tempo.
+- Demonstração prática de conceitos de geometria 2D aplicados com OpenGL.
+
+---
+
+## 🏁 Como Executar
+
+1. Clone este repositório:
    ```bash
    git clone https://github.com/Felipe-Araujo-duck/fazenda.git
