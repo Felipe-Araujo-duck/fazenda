@@ -30,4 +30,4 @@ Durante a execução, o **sol se move pela tela simulando a passagem do tempo**.
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/seu-usuario/seu-repositorio.git
+   git clone https://github.com/Felipe-Araujo-duck/fazenda.git
