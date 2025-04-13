@@ -1,4 +1,4 @@
-# 🌄 Projeto Geometria 2D — Paisagem Interativa com OpenGL
+# 🌄 Computação Gráfica e RA — Paisagem Interativa com OpenGL
 
 Este projeto foi desenvolvido como trabalho avaliativo da disciplina de **Geometria 2D** no curso de Ciência da Computação.  
 Ele utiliza **C# com OpenGL** (através da biblioteca `Tao.OpenGl` e `Tao.FreeGlut`) para renderizar uma **animação gráfica 2D interativa** no console do .NET Framework.
