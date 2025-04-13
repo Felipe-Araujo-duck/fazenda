@@ -19,51 +19,62 @@ namespace ProjetoPonto
 
         static void desenharSol()
         {
+            Gl.glPushMatrix(); 
+            Gl.glTranslatef(posSolX, 0, 0); 
+
             Gl.glColor3f(1.0f, 1.0f, 0.0f);
             Gl.glBegin(Gl.GL_TRIANGLE_FAN);
-            Gl.glVertex2f(posSolX, 90); 
+            Gl.glVertex2f(0, 90);
             int numLados = 100;
             float raio = 5.0f;
             for (int i = 0; i <= numLados; i++)
             {
                 double ang = i * 2.0 * Math.PI / numLados;
-                float x = (float)(posSolX + raio * Math.Cos(ang));
-                float y = (float)(90 + raio * Math.Sin(ang));
-                Gl.glVertex2f(x, y);
+                float x = (float)(raio * Math.Cos(ang));
+                float y = (float)(raio * Math.Sin(ang));
+                Gl.glVertex2f(x, y + 90); 
             }
             Gl.glEnd();
+
+            Gl.glPopMatrix(); 
         }
+
 
         static void desenharLua()
         {
+            Gl.glPushMatrix();
+            Gl.glTranslatef(posSolX, 0, 0);
+
             Gl.glColor3f(0.9f, 0.9f, 1.0f);
             Gl.glBegin(Gl.GL_TRIANGLE_FAN);
-            Gl.glVertex2f(posSolX, 90);
+            Gl.glVertex2f(0, 90);
             int numLados = 100;
             float raio = 4.0f;
             for (int i = 0; i <= numLados; i++)
             {
                 double ang = i * 2.0 * Math.PI / numLados;
-                float x = (float)(posSolX + raio * Math.Cos(ang));
-                float y = (float)(90 + raio * Math.Sin(ang));
-                Gl.glVertex2f(x, y);
+                float x = (float)(raio * Math.Cos(ang));
+                float y = (float)(raio * Math.Sin(ang));
+                Gl.glVertex2f(x, y + 90);
             }
             Gl.glEnd();
 
-            // CIRCULO PARA CORTAR A LUA
-            Gl.glColor3f(0.0f, 0.0f, 0.1f); 
+            Gl.glColor3f(0.0f, 0.0f, 0.1f);
             Gl.glBegin(Gl.GL_TRIANGLE_FAN);
-            Gl.glVertex2f(posSolX + 1.5f, 90);
+            Gl.glVertex2f(1.5f, 90);
             float raioSombra = 4.0f;
             for (int i = 0; i <= numLados; i++)
             {
                 double ang = i * 2.0 * Math.PI / numLados;
-                float x = (float)(posSolX + 1.5f + raioSombra * Math.Cos(ang));
-                float y = (float)(90 + raioSombra * Math.Sin(ang));
-                Gl.glVertex2f(x, y);
+                float x = (float)(raioSombra * Math.Cos(ang));
+                float y = (float)(raioSombra * Math.Sin(ang));
+                Gl.glVertex2f(x + 1.5f, y + 90);
             }
             Gl.glEnd();
+
+            Gl.glPopMatrix();
         }
+
 
         static void desenharCasa()
         {
